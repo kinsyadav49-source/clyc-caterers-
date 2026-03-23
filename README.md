@@ -3,156 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Royal Feast | Premium Catering Menu</title>
+    <title>Royal Feast | Luxury Catering Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --gold: #d4af37;
-            --dark: #0b0d17;
-            --card-bg: #1a1c23;
+            --dark-bg: #0f111a;
+            --card-bg: #1a1e2e;
         }
 
         body {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark-bg);
+            color: #ffffff;
             margin: 0;
-            background-color: var(--dark);
-            color: white;
-            line-height: 1.6;
+            padding: 0;
         }
 
         header {
-            text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=1500&q=80');
             background-size: cover;
-            border-bottom: 3px solid var(--gold);
+            background-position: center;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 4px solid var(--gold);
         }
 
-        h1 { color: var(--gold); font-size: 3rem; margin-bottom: 10px; }
-        
-        .menu-container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 20px;
-        }
+        h1 { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 3.5rem; margin: 0; }
+        p.subtitle { font-size: 1.2rem; letter-spacing: 2px; text-transform: uppercase; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 50px 20px; }
 
         .section-title {
+            font-family: 'Playfair Display', serif;
             text-align: center;
             color: var(--gold);
-            font-size: 2rem;
-            margin-top: 50px;
-            border-bottom: 1px solid #333;
-            padding-bottom: 10px;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--gold);
+            margin: 10px auto;
         }
 
         .menu-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
+            gap: 30px;
+            margin-bottom: 60px;
         }
 
         .dish-card {
             background: var(--card-bg);
-            border-radius: 15px;
+            border-radius: 20px;
             overflow: hidden;
-            border: 1px solid #333;
-            transition: 0.4s;
+            transition: transform 0.4s ease;
+            border: 1px solid rgba(212, 175, 55, 0.1);
         }
 
         .dish-card:hover {
             transform: translateY(-10px);
             border-color: var(--gold);
-            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
         }
 
         .dish-img {
             width: 100%;
-            height: 200px;
+            height: 250px;
             object-fit: cover;
-            border-bottom: 2px solid var(--gold);
+            border-bottom: 3px solid var(--gold);
         }
 
-        .dish-info { padding: 20px; }
-        .dish-info h3 { color: var(--gold); margin-top: 0; }
-        .price { color: #aaa; font-style: italic; }
+        .dish-content { padding: 25px; }
+        .dish-content h3 { color: var(--gold); margin: 0 0 10px 0; font-size: 1.5rem; }
+        .dish-content p { color: #ccc; font-size: 0.95rem; }
+        .tag {
+            background: rgba(212, 175, 55, 0.2);
+            color: var(--gold);
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
 
-        .btn-order {
-            display: block;
-            width: 100%;
-            padding: 12px;
-            background: var(--gold);
-            color: black;
+        footer {
             text-align: center;
+            padding: 40px;
+            background: #000;
+            border-top: 1px solid #333;
+        }
+
+        .contact-btn {
+            background: var(--gold);
+            color: #000;
+            padding: 15px 40px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
-            margin-top: 15px;
+            transition: 0.3s;
         }
+
+        .contact-btn:hover { background: #fff; }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Royal Feast Catering</h1>
-        <p>Exquisite Flavors for Your Grand Celebrations</p>
+        <h1>Royal Feast</h1>
+        <p class="subtitle">Luxury Catering Services</p>
     </header>
 
-    <div class="menu-container">
+    <div class="container">
         
-        <h2 class="section-title">✨ Signature Starters</h2>
+        <h2 class="section-title">Royal Starters</h2>
         <div class="menu-grid">
             <div class="dish-card">
-                <img src="https://images.unsplash.com/photo-1601050638917-3f887b40d04c?auto=format&fit=crop&w=500&q=80" alt="Paneer Tikka" class="dish-img">
-                <div class="dish-info">
-                    <h3>Paneer Malai Tikka</h3>
-                    <p>Creamy marinated cottage cheese grilled to perfection in tandoor.</p>
-                    <span class="price">Premium Selection</span>
+                <img src="https://images.unsplash.com/photo-1599487488170-d11ee9917509?auto=format&fit=crop&w=600&q=80" class="dish-img">
+                <div class="dish-content">
+                    <span class="tag">VEG</span>
+                    <h3>Paneer Tikka Platter</h3>
+                    <p>Classic tandoori marinated cottage cheese with mint chutney.</p>
                 </div>
             </div>
-
             <div class="dish-card">
-                <img src="https://images.unsplash.com/photo-1599487488170-d11ee9917509?auto=format&fit=crop&w=500&q=80" alt="Hara Bhara Kabab" class="dish-img">
-                <div class="dish-info">
-                    <h3>Hara Bhara Kabab</h3>
-                    <p>Classic spinach and green pea patties with traditional spices.</p>
+                <img src="https://images.unsplash.com/photo-1626074353765-517a681e40be?auto=format&fit=crop&w=600&q=80" class="dish-img">
+                <div class="dish-content">
+                    <span class="tag">NON-VEG</span>
+                    <h3>Afghani Chicken Tikka</h3>
+                    <p>Juicy chicken pieces marinated in creamy yogurt and mild spices.</p>
                 </div>
             </div>
         </div>
 
-        <h2 class="section-title">🥘 Royal Main Course</h2>
+        <h2 class="section-title">Exquisite Main Course</h2>
         <div class="menu-grid">
             <div class="dish-card">
-                <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=500&q=80" alt="Dal Makhani" class="dish-img">
-                <div class="dish-info">
-                    <h3>Signature Dal Makhani</h3>
-                    <p>Slow-cooked black lentils simmered overnight with butter and cream.</p>
+                <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?auto=format&fit=crop&w=600&q=80" class="dish-img">
+                <div class="dish-content">
+                    <span class="tag">VEG</span>
+                    <h3>Shahi Paneer Butter Masala</h3>
+                    <p>Rich cashew gravy with cottage cheese and fresh cream.</p>
                 </div>
             </div>
-
             <div class="dish-card">
-                <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?auto=format&fit=crop&w=500&q=80" alt="Shahi Paneer" class="dish-img">
-                <div class="dish-info">
-                    <h3>Shahi Paneer Masala</h3>
-                    <p>Rich cashew-based gravy with soft cubes of premium cottage cheese.</p>
+                <img src="https://images.unsplash.com/photo-1563379091339-03b17af4a4f9?auto=format&fit=crop&w=600&q=80" class="dish-img">
+                <div class="dish-content">
+                    <span class="tag">NON-VEG</span>
+                    <h3>Hyderabadi Dum Biryani</h3>
+                    <p>Long grain basmati rice cooked with aromatic spices and tender meat.</p>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="https://images.unsplash.com/photo-1589119908995-c6837fa14848?auto=format&fit=crop&w=600&q=80" class="dish-img">
+                <div class="dish-content">
+                    <span class="tag">VEG</span>
+                    <h3>Dal Makhani Bukhara</h3>
+                    <p>Whole black lentils simmered for 24 hours with butter and spices.</p>
                 </div>
             </div>
         </div>
 
-        <h2 class="section-title">🍰 Sweet Indulgence</h2>
+        <h2 class="section-title">Heavenly Desserts</h2>
         <div class="menu-grid">
             <div class="dish-card">
-                <img src="https://images.unsplash.com/photo-1589119908995-c6837fa14848?auto=format&fit=crop&w=500&q=80" alt="Gulab Jamun" class="dish-img">
-                <div class="dish-info">
+                <img src="https://images.unsplash.com/photo-1596797038530-2c39da81b491?auto=format&fit=crop&w=600&q=80" class="dish-img">
+                <div class="dish-content">
+                    <span class="tag">SWEET</span>
                     <h3>Gulab Jamun with Rabri</h3>
-                    <p>Warm dumplings soaked in syrup, served with chilled thick milk.</p>
+                    <p>Golden fried dumplings dipped in rose syrup, served with thick rabri.</p>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="https://images.unsplash.com/photo-1517427294546-5aa121f68e8a?auto=format&fit=crop&w=600&q=80" class="dish-img">
+                <div class="dish-content">
+                    <span class="tag">SWEET</span>
+                    <h3>Moong Dal Halwa</h3>
+                    <p>Traditional Rajasthani dessert made with pure desi ghee and nuts.</p>
                 </div>
             </div>
         </div>
 
-        <div style="text-align: center; margin-top: 50px;">
-            <a href="mailto:contact@yourcatering.com" class="btn-order">Get Custom Quote for Your Event</a>
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="https://wa.me/YOURNUMBER" class="contact-btn">Check Custom Packages</a>
         </div>
     </div>
+
+    <footer>
+        <p>&copy; 2026 Royal Feast Catering. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
