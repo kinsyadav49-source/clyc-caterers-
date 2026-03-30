@@ -202,4 +202,23 @@
     </footer>
 
 </body>
-</html>
+</html>.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.35; /* luxury glass feel */
+  z-index: 1;
+  filter: blur(1px) brightness(0.9);
+}
+
+/* Overlay for premium look */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(255,255,255,0.85), rgba(247,243,234,0.7));
+  z-index: 1;
+}<source src="https://cdn.coverr.co/videos/coverr-chef-cooking-in-kitchen-9716/1080p.mp4" type="video/mp4">
